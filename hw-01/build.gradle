@@ -22,8 +22,8 @@ dependencies {
 }
 
 shadowJar {
-    setArchivesBaseName('fat-jar-file')
-    setVersion('0.0.2')
+    archiveBaseName.set('fat-jar-file')
+    archiveVersion.set('0.0.2')
     manifest {
         attributes 'Main-Class': 'com.example.hw01.Hw01Application'
     }
