@@ -25,7 +25,7 @@ shadowJar {
     setArchivesBaseName('fat-jar-file')
     setVersion('0.0.2')
     manifest {
-        attributes 'Hw01Application': 'com.example.hw01'
+        attributes 'Main-Class': 'com.example.hw01.Hw01Application'
     }
 }
 
