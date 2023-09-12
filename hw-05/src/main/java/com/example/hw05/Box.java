@@ -1,13 +1,8 @@
 package com.example.hw05;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
 public class Box<T extends Fruit> {
 
     private List<T> fruits = new ArrayList<>();
@@ -23,7 +18,7 @@ public class Box<T extends Fruit> {
                 .sum();
     }
 
-    public boolean compare(Box<T> anotherBox) {
+    public boolean compare(Box<? extends Fruit> anotherBox) {
         return this.weight() == anotherBox.weight();
     }
 
@@ -32,5 +27,13 @@ public class Box<T extends Fruit> {
             other.addFruit(fruit);
         }
         this.getFruits().clear();
+    }
+
+    public List<T> getFruits() {
+        return this.fruits;
+    }
+
+    public void setFruits(List<T> fruits) {
+        this.fruits = fruits;
     }
 }
