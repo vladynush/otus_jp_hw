@@ -18,13 +18,14 @@ public class LoggingService implements LoggingInterface {
         System.out.println("This is two args method\n");
     }
 
+    @Log
     @Override
     public void calculation(Object arg1, Object arg2, Object arg3) {
-        System.out.println("This is threes method\n");
+        System.out.println("This is three args method\n");
     }
 
-    @Override
     @Log
+    @Override
     public void calculation(Object... args) {
         System.out.println("This is multi args method\n");
     }
