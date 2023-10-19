@@ -15,13 +15,12 @@ repositories {
     mavenCentral()
 }
 
-test {
-    useJUnitPlatform()
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
-dependencies {
-    implementation 'com.google.guava:guava:32.1.2-jre'
-    implementation 'org.projectlombok:lombok:1.18.26'
-    implementation 'org.apache:apache:30'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+test {
+    useJUnitPlatform()
 }
