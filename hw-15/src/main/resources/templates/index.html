@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    Баланс в банкомате: <p th:text="${balance}">Balance</p>
+    <p>Выберете действие:</p>
+    <div class="item">
+        <label id="put-money-status"></label>
+        <div class="put-value">
+            <label id="put-money-10" mode="TEN" for="put-money-10-input">10</label>
+            <input id="put-money-10-input" type="text" placeholder="Укажите количество"/>
+        </div>
+        <div  class="put-value">
+            <label id="put-money-50" mode="FIFTY" for="put-money-50-input">50</label>
+            <input id="put-money-50-input" type="text" placeholder="Укажите количество"/>
+        </div>
+        <div  class="put-value">
+            <label id="put-money-100" mode="HUNDRED" for="put-money-100-input">100</label>
+            <input id="put-money-100-input" type="text" placeholder="Укажите количество"/>
+        </div>
+        <div  class="put-value">
+            <label id="put-money-500" mode="FIVE_HUNDRED" for="put-money-500-input">500</label>
+            <input id="put-money-500-input" type="text" placeholder="Укажите количество"/>
+        </div>
+        <div  class="put-value">
+            <label id="put-money-1000" mode="THOUSAND" for="put-money-1000-input">1000</label>
+            <input id="put-money-1000-input" type="text" placeholder="Укажите количество"/>
+        </div>
+        <div class="put-value">
+            <label id="put-money-5000" mode="FIVE_THOUSAND" for="put-money-5000-input">5000</label>
+            <input id="put-money-5000-input" type="text" placeholder="Укажите количество"/>
+        </div>
+        <div class="action-button put">
+            <input type="submit" value="Внести деньги"/>
+        </div>
+    </div>
+    <div class="item">
+        <label id="take-money-status" for="take-money"></label>
+        <input id="take-money" placeholder="Укажите количество"/>
+        <div class="action-button take">
+            <input type="submit" value="Снять деньги"/>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="base.js"></script>
+</html>
