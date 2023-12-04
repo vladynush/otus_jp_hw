@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: "java"
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+
+//test {
+//    useJUnitPlatform()
+//}
